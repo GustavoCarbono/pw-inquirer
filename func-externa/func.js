@@ -1,10 +1,9 @@
-import { idadeFor } from "../for/idade";
-import { media } from "../for/media";
-import { sexo } from "../for/sexo";
-import { idadeWhile } from "../while/idade";
-import { idadeWhile } from "../while/idade";
-import { numero } from "../while/numero";
-import { pares } from "../while/pares";
+import { idadeFor } from "../for/idade.js";
+import { media } from "../for/media.js";
+import { sexo } from "../for/sexo.js";
+import { idadeWhile } from "../while/idade.js";
+import { numero } from "../while/numero.js";
+import { pares } from "../while/pares.js";
 
 let func = [
     [
@@ -17,14 +16,14 @@ let func = [
 
     ],
     [
-        idadeFor,
-        media,
-        sexo
+        idadeFor(),
+        media(),
+        sexo()
     ],
     [
-        idadeWhile,
-        numero,
-        pares
+        idadeWhile(),
+        numero(),
+        pares()
     ]
 ]
 
