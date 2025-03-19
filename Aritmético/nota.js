@@ -18,7 +18,7 @@ async function nota() {
     let nota1 = parseInt(res.n1)
     let nota2 = parseInt(res.n2)
     let media = (nota1+nota2)/2
-    System.out.println(media)
+    console.log(media)
 }
 
 export {nota}

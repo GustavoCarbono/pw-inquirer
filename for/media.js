@@ -1,14 +1,12 @@
 import { perguntar } from "../func-externa/inquirer.js"
 
-var question = [
-    {
+var question = {
         type: 'input',
         name: 'ax',
         message: 'Digite o valor desejado'
     }
-]
 
-async function media() {
+async function mediaFor() {
     let a = []
     let soma = 0
     for(let i=0; i<10; i++) {
@@ -20,4 +18,4 @@ async function media() {
     console.log("A média é " + media)
 }
 
-export {media}
+export {mediaFor}

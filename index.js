@@ -1,5 +1,5 @@
 import { perguntar } from "./func-externa/inquirer.js"
-import { escolha } from "./func-externa/switch.js"
+import { escolha } from "./func-externa/escolha.js"
 
 var question = [
     {
@@ -16,8 +16,8 @@ var question = [
 
 var res = await perguntar(question)
 
-var opc1 = res.opc1
-var opc2 = res.opc2
+var opc1 = parseInt(res.opc1)
+var opc2 = parseInt(res.opc2)
 
 
 escolha(opc1, opc2)

@@ -1,24 +1,31 @@
-const System = {
-    out: {
-        println: function (elemento) {console.log(elemento)}
+import { perguntar } from "../func-externa/inquirer.js"
+
+var question = {
+        type: 'input',
+        name: 'diaSemana',
+        message: 'Qual é o dia da semana'
+    }
+
+async function semana() {
+    let res = await perguntar(question)
+    let diaSemana = parseInt(res.diaSemana)
+    switch(diaSemana) {
+        case 1: console.log("domingo")
+            break
+        case 2: console.log("segunda")
+            break
+        case 3: console.log("terça")
+            break
+        case 4: console.log("quarta")
+            break
+        case 5: console.log("quinta")
+            break
+        case 6: console.log("sexta")
+            break
+        case 7: console.log("sábado")
+            break
+        default:
     }
 }
-let diaSemana = 2
-switch(diaSemana) {
-case 1: System.out.println("domingo")
-break
-case 2: System.out.println("segunda")
-break
-case 3: System.out.println("terça")
-break
-case 4: System.out.println("quarta")
-break
-case 5: System.out.println("quinta")
-break
-case 6: System.out.println("sexta")
-break
-case 7: System.out.println("sábado")
-break
-default:
-break
-}
+
+export {semana}

@@ -1,18 +1,31 @@
-const System = {
-    out: {
-        println: function (elemento) {console.log(elemento)}
+import { perguntar } from "../func-externa/inquirer.js"
+
+var question = {
+        type: 'input',
+        name: 'codigo',
+        message: 'Qual o código do produto'
+    }
+
+async function cantina() {
+    let res = await perguntar(question)
+    let codigo = parseInt(res.codigo)
+    switch(codigo) {
+        case 1: 
+            console.log("Cachorro Quente")
+            break
+        case 2: 
+            console.log("Cheeseburguer")
+            break
+        case 3: 
+            console.log("X-Salada")
+            break
+        case 4: 
+            console.log("Misto Quente")
+            break
+        case 5: 
+            console.log("Pão na Chapa")
+            break
     }
 }
-let código = 4
-switch(codigo) {
-    case 1: System.out.println("Cachorro Quente")
-    break
-    case 2: System.out.println("Cheeseburguer")
-    break
-    case 3: System.out.println("X-Salada")
-    break
-    case 4: System.out.println("Misto Quente")
-    break
-    case 5: System.out.println("Pão na Chapa")
-    break
-}
+
+export {cantina}
